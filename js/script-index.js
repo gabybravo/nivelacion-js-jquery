@@ -14,6 +14,7 @@ function printNews(){
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activitiesArray);
 
 });
 
@@ -64,8 +65,15 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintar todas las actividades
 */
-function renderActivities(activitiesArray) {
-	console.log('Activities: ', activities);
+	//Etapa 5:
+ function renderActivities(activitiesArray) {
+  	console.log('Activities: ', activitiesArray);
+	activitiesArray.forEach(function(element){
+		renderActivity(element);
+	})
+  	if(activitiesArray.length > 0){
+  		$(".wrapper-message").hide();
+  	}
 }
 
 /*
