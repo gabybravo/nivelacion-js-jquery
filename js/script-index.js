@@ -6,7 +6,7 @@ $(document).ready( function(){
 
  	//Etapa 2: 
  	$(".callout-news").append(printNews());
- 	
+
 function printNews(){
 	$('p').text("NUEVAS RECETAS");
 }
@@ -23,7 +23,12 @@ function printNews(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	//console.log('Recipes: ', recipesArray);
+	recipesArray.forEach(function(element){
+ 		if (element.highlighted == true){
+ 			renderRecipe(element);
+		}
+	})
 }
 
 /*
@@ -33,7 +38,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipesArray);
+	console.log('Voy a pintar la receta: ', recipe);
 }
 
 
