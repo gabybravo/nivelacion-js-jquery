@@ -40,7 +40,6 @@ function renderHighlightedRecipes(recipesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
 */
-
 	//Etapa 4:
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
@@ -59,8 +58,6 @@ function renderRecipe(recipe) {
 		</a>
 		`)
 }
-
-
 
 /*
 * Función que se encarga de pintar todas las actividades
@@ -90,7 +87,7 @@ function renderActivity(recipe) {
 		    		<img src="` + recipe.userAvatar + `" class="image-avatar">
 		    	</span> 
 		   		<span class="meta">
-		      		<span class="author">` + recipe.userName + `</span>
+		      		<span class="author">` + recipe.userName + `</span> made
 		     		<span class="recipe">` + recipe.recipeName + `</span>` + recipe.text + `
 		      		<span class="location">` + recipe.place + `</span>
 		    	</span>
