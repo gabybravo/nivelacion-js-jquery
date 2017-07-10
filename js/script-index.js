@@ -22,6 +22,8 @@ function printNews(){
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
+
+	//Etapa 3:
 function renderHighlightedRecipes(recipesArray) {
 	//console.log('Recipes: ', recipesArray);
 	recipesArray.forEach(function(element){
@@ -37,8 +39,24 @@ function renderHighlightedRecipes(recipesArray) {
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-recipe.html"
 */
+
+	//Etapa 4:
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+	$(".list-recipes").append(`
+		<a class="item-recipe" href="#">
+  			<span class="attribution">
+  			 	<span class="title-recipe">`+ recipe.title+`</span>
+	   			<span class="metadata-recipe">
+    				<span class="author-recipe">`+ recipe.source.name +`</span>
+     				<span class="bookmarks-recipe">
+     					<span class="icon-bookmark"></span> 
+	      				</span>
+    			</span>
+	  			</span>
+    			<img src="img/recipes/320x350/`+ recipe.name +`.jpg" />
+		</a>
+		`)
 }
 
 
